@@ -5,4 +5,5 @@ This project is a lane detection system using OpenCV that processes video footag
 
 2. Apply the Canny function: Apply the Canny function on the image in the previous step to create an image that shows all the edges. The Canny function generates edges by measuring the gradients of adjacent pixels and identifying the edges 
    where there is high change in the gradients:
-   
+
+    ![canny](https://github.com/user-attachments/assets/b55cd73c-9256-47aa-a96f-92b931592879)
