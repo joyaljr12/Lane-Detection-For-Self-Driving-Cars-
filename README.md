@@ -1,5 +1,5 @@
 This project is a lane detection system using OpenCV that processes video footage to identify road lane markings. It starts by preprocessing each video frame through a series of image processing techniques, including converting the image to grayscale, applying Gaussian blur to reduce noise, and using Canny edge detection to highlight edges. The region of interest (ROI) is then masked to focus on the area where road lanes are expected. Hough Line Transform is used to detect lines in the processed image, and the detected lines are filtered based on their slope to differentiate between left and right lanes. The slopes and intercepts of multiple lines are averaged to create smooth, continuous lane markings. These detected lanes are overlaid on the original video frame and displayed in real-time, allowing for robust lane detection even in noisy or complex road conditions. This system can be applied in self-driving car technologies, road safety systems, and real-time lane monitoring applications.
-1. Convert the input image to grayscale and apply Gaussian Blur to the image
+1. Convert the input image to grayscale and apply Gaussian Blur to the image:
 
    ![Blur](https://github.com/user-attachments/assets/2ffca067-c879-4338-873c-e7ea1fc7b856)
 
@@ -14,3 +14,5 @@ This project is a lane detection system using OpenCV that processes video footag
    ![Screenshot 2024-10-09 233914](https://github.com/user-attachments/assets/f2ef07d6-112c-4632-aa65-1ddc098ec322)
 
 4. Extend the lines to draw a single long lane line for each of the left and right lane lines respectively: I accomplished this by filtering lines by slope, thereby selecting the lines only within a certain range of the actual slope of the lane lines and ignoring others. Once I separated the left lane lines and right lane lines, I found the best line fit through the points for both the left and the right lanes along with their slopes and intercepts. Since the slopes and intercepts of the left and right lines with the best line fit are now known, I extended these lines to the edges of the ROI mask. The result:
+
+   ![Screenshot 2024-10-09 234351](https://github.com/user-attachments/assets/dc26803c-563b-4508-95c9-277af87bbe11)
