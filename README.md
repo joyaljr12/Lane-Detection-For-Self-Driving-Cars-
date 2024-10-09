@@ -11,4 +11,4 @@ This project is a lane detection system using OpenCV that processes video footag
 3. Apply the Hough transform function: Since the lanes are in the bottom half of the image, I created a “region of interest” trapezoidal mask to ensure that none of the other lines outside the region of interest interfere with the 
    algorithm. I then applied a hough transform to the edges within the mask to extract the lane lines in the image.
 
-    
+    ![Screenshot 2024-10-09 231932](https://github.com/user-attachments/assets/0e082289-7424-47aa-8234-026622df2ae7)
