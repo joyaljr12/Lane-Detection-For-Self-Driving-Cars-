@@ -7,3 +7,8 @@ This project is a lane detection system using OpenCV that processes video footag
    where there is high change in the gradients:
 
     ![canny](https://github.com/user-attachments/assets/b55cd73c-9256-47aa-a96f-92b931592879)
+
+3. Apply the Hough transform function: Since the lanes are in the bottom half of the image, I created a “region of interest” trapezoidal mask to ensure that none of the other lines outside the region of interest interfere with the 
+   algorithm. I then applied a hough transform to the edges within the mask to extract the lane lines in the image.
+
+    
